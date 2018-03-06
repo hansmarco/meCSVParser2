@@ -45,7 +45,7 @@ public class CSVReader {
 
     }
 
-    public static void myTime() throws ParseException {
+    public  void myTime() throws ParseException {
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
         String dateInString = "04-03-2018 10:20:56";
