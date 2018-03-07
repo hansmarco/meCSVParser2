@@ -24,6 +24,15 @@ repositories {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore
+    compile group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.3.2'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.10.0'
+    // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore-nio
+    compile group: 'org.apache.httpcomponents', name: 'httpcore-nio', version: '4.3.2'
+// https://mvnrepository.com/artifact/org.slf4j/log4j-over-slf4j
+    compile group: 'org.slf4j', name: 'log4j-over-slf4j', version: '1.7.25'
+    compile group: 'org.elasticsearch.client', name: 'transport', version: '6.2.2'
+
 }
 
 compileKotlin {

@@ -22,21 +22,21 @@ public class CSVReader {
             int rows = 0;
             while ((line = br.readLine()) != null) {
 
-                if (rows >0) {
+                if (rows > 0) {
                     // use comma as separator
                     String[] country = line.split(cvsSplitBy);
 
                     // System.out.println("[time= " + country[0] + " , RR=" + country[1] + "]");
                     Long nanoPIT = new BigDecimal(country[0]).longValue();
                     //Long nanoPIT = Long.parseLong(country[0]);
-                    Long millisPIT = startingMillis + nanoPIT/1000;
+                    Long millisPIT = startingMillis + nanoPIT / 1000;
 
                     //System.out.println("row: "+rows+"; millisPIT: "+millisPIT);
                 }
                 rows++;
             }
             long millis = System.currentTimeMillis() % 1000;
-            System.out.println("millis: "+millis);
+            System.out.println("millis: " + millis);
             //myTime();
 
         } catch (IOException e) {
@@ -45,7 +45,7 @@ public class CSVReader {
 
     }
 
-    public  void myTime() throws ParseException {
+    public void myTime() throws ParseException {
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
         String dateInString = "04-03-2018 10:20:56";
